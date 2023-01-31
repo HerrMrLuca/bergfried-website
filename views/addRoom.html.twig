@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block title %}PDO Example{% endblock title %}
+{% block main %}
+    <h1>PDO Example</h1>
+    <div class="border p-3 mt-5">
+        {{ include('errors.html.twig') }}
+        <form method="post" action="{{ url_for("/addRoom") }}">
+            <div class="mb-3">
+                <label for="class" class="form-label">Class Name</label>
+                <input type="text" class="form-control" id="class" name="class" value="{{ class }}"
+                       placeholder="class name" aria-describedby="classHelp" autocomplete="class">
+                <div id="classHelp" class="form-text">Please enter a class name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="short_description" class="form-label">short_description</label>
+                <input type="text" class="form-control" id="short_description" name="short_description" value="{{ short_description }}"
+                       placeholder="short_description" aria-describedby="shortHelp" autocomplete="current-short_description">
+                <div id="shortHelp" class="form-text">Please enter a short_description.</div>
+            </div>
+            <div class="mb-3">
+                <label for="long_description" class="form-label">long_description</label>
+                <input type="text" class="form-control" id="long_description" name="long_description" value="{{ long_description }}"
+                       placeholder="long_description" aria-describedby="longHelp" autocomplete="current-long_description">
+                <div id="longHelp" class="form-text">Please enter a long_description.</div>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                <input type="text" class="form-control" id="price" name="price" value="{{ price }}"
+                       placeholder="price" aria-describedby="priceHelp" autocomplete="current-price">
+                <div id="priceHelp" class="form-text">Please enter a price.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Room Category</button>
+        </form>
+    </div>
+    <div class="border p-3 mt-5">
+    <h2>List of Room Categories</h2>
+    <div>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Price</th>
+            </tr>
+            {% if room is defined %}
+                {% for key, value in room %}
+                    <tr>
+                        <td> {{ room[key]['class'] }} </td>
+                        <td> {{ room[key]['price'] }} </td>
+                        <td> {{ room[key]['short_description'] }} </td>
+                        <td> {{ room[key]['long_description'] }} </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td> No products found in search </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+    </div>
+{% endblock main %}

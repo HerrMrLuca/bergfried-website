@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}What's the Weather?{% endblock title %}
+{% block main %}
+    <h2>What's the Weather in Hallstatt?</h2>
+    {% if weather is defined %}
+        <div class="border p-3 mt-5">
+            <h3>Weather Forecast</h3>
+            <p>This is the forecast for {{ weather.location }}.</p>
+            <p><img src="{{ weather.image }}" alt="Weather forecast for {{ weather.location }}."></p>
+        </div>
+    {% endif %}
+    {% if noresult is defined %}
+        <div class="border p-3 mt-5">
+            <h3>Weather Forecast</h3>
+            <p>No valid location could be resolved for {{ noresult.location }}.</p>
+            <p>No weather forecast can be shown.</p>
+        </div>
+    {% endif %}
+{% endblock main %}

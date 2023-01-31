@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Imprint{% endblock title %}
+{% block head %}
+    {{ parent() }}
+    <Style>
+        .important {
+            color: #224f8f;
+            margin: 0;
+        }
+    </Style>
+{% endblock head %}
+{% block main %}
+    <h1>Imprint</h1>
+{{imprint | raw}}
+{% endblock main%}

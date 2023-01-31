@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Register{% endblock title %}
+{% block main %}
+    <h1>Register</h1>
+    <div class="border p-3 mt-5">
+        {{ include('errors.html.twig') }}
+        <form method="post" action="{{ url_for("/register") }}">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ username }}"
+                       placeholder="Username" aria-describedby="userHelp" autocomplete="username" required>
+                <div id="userHelp" class="form-text">Please enter the Username you want to register with.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ email }}"
+                       placeholder="you@example.com" aria-describedby="emailHelp" autocomplete="email" required>
+                <div id="emailHelp" class="form-text">Please enter the email address you want to register with.</div>
+            </div>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" value="{{ firstName }}"
+                       placeholder="Max" aria-describedby="telHelp" autocomplete="tel" required>
+                <div id="telHelp" class="form-text">Please enter your first name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" value="{{ lastName }}"
+                       placeholder="Mustermann" aria-describedby="lastNameHelp" autocomplete="lastName" required>
+                <div id="lastNameHelp" class="form-text">Please enter your last name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="tel" class="form-label">Telephone Number</label>
+                <input type="tel" class="form-control" id="tel" name="tel" value="{{ tel }}"
+                       placeholder="0660 123456789" aria-describedby="emailHelp" autocomplete="tel" required>
+                <div id="emailHelp" class="form-text">Please enter your telephone number.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password"
+                       placeholder="Password" aria-describedby="passwordHelp" autocomplete="current-password"
+                       required>
+                <div id="passwordHelp" class="form-text">Please enter a password.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password2" class="form-label">Password bestätigen</label>
+                <input type="password" class="form-control" id="password2" name="password2"
+                       placeholder="Password" aria-describedby="password2Help" autocomplete="current-password"
+                       required>
+                <div id="password2Help" class="form-text">Please enter your password again.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+{% endblock main %}

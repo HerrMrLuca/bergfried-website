@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kontakt - Pension Bergfried</title>
+
+  <base href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link href="{{ get_base_path() }}/css/style.css" type="text/css" rel="stylesheet" media="only screen and (min-width: 651px)">
+  <link rel="stylesheet"
+  media="only screen and (max-width: 650px)" href="phone.css" type="text/css">
+  <link href="assets/dist/css/datepicker-bs4.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9f0e4b36fb.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- Nav -->
+<div class="container">
+  <div class="body">
+  </div>
+  <nav>
+    <div class="connav" id="con2">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul id="connav">
+          <div>
+            <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <li><a class="nav1">Pension Bergfried</a></li>
+
+          <li style="float:right"><a id="nav3" class="navl"><img src="https://www.welt-flaggen.de/data/flags/emoji/twitter/256x256/at.png"></a>
+            <ul class="language" id="ulnav">
+                <li class="language"><a id="EN" href="ENcontact.php"></a></li>
+                <li class="language"><a id="CZ" href="CZcontact.php"></a></li>
+            </ul>
+          </li>
+          <li style="float:right"><a id="nav-a" class="nav" href="contact.php">Kontakt</a></li>
+          <li style="float:right"><a id="nav2" class="nav" href="room">Zimmer</a></li>
+          <li style="float:right"><a id="nav3" class="nav" href="index">Startseite</a></li>
+        </ul>
+        <div>
+          <ul id="considebar">
+            <li><a id="sidebar3" class="sidebar2" href="index">Startseite</a></li>
+            <li><a id="sidebar2" class="sidebar2" href="room">Zimmer</a></li>
+            <li><a id="sidebar1" class="sidebar2" href="contact">Kontakt</a></li>
+            <li><a id="sidebar4" class="sidebar" href="img">Bilder</a></li>
+            <!--<li><a id="sidebar" class="sidebar" href="roomimg.html">Zimmer-Bilder</a></li>
+            <li><a id="sidebar" class="sidebar" href="price.html">Preise</a></li>-->
+            <li><a id="sidebar5" class="sidebar" href="arrival">Anfahrt</a></li>
+            <li><a id="sidebar6" class="sidebar" target="_blank" href="https://www.salzkammergut.at/aktivitaeten.html">Aktivitäten</a></li>
+            <li><a id="sidebar7" class="sidebar" target="_blank" href="https://www.salzkammergut.at/oesterreich-stadt-ort/detail/430000973/hallstatt.html">Reiseplaner</a></li>
+            <li><a id="sidebar8" class="sidebar" href="about">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- Content-Picture -->
+  <div>
+  </div>
+  <!-- Content-Text -->
+  <div class="container">
+    <div class="contentimp">
+      <h6>Kontakt</h6>
+      <p style="text-align: left">Pension Bergfried<br>
+      Echerntalweg 3<br>
+      4830 Hallstatt<br><br>
+
+      Telefon: +43 660 8570684<br><br>
+
+      E-Mail: bergfried-hallstatt@gmx.at</p><br>
+
+      <p style="margin: 0px;">Haben Sie Fragen, Wünsche oder Anregungen? Bitte nehmen Sie Kontakt mit uns auf, wir helfen Ihnen gerne weiter!</p>
+    </div>
+    <div class="line">
+    </div>
+    <div class="contentimp2">
+      
+
+      <h3>Kontaktformular</h3><br>
+      <div>
+        <form action="send.php" enctype=”multipart/form-data” name=”EmailForm” method="post">
+          <label for="name" class="label">Name*</label>
+          <input type="text" id="name" name="name" autocomplete="off" required="required" class="form"><br><br>
+          <label for="adress" class="label">Adresse:*</label>
+          <input type="text" id="adress" name="adress" autocomplete="off" required="required" class="form"><br><br>
+          <label for="plz" class="label">PLZ:*</label>
+          <input type="text" id="plz" name="plz" autocomplete="off" required="required" class="form"><br><br>
+          <label for="email" class="label">E-Mail-Adresse:*</label>
+          <input type="email" id="email" name="email" autocomplete="off" required="required" class="form"><br><br>
+          <label for="tel" class="label">Tel:</label>
+          <input type="tel" id="tel" name="tel" autocomplete="off" class="form"><br><br>
+          <label for="notes" class="notes" >Nachricht:*</label>
+          <textarea type="text" id="notes" name="notes" autocomplete="off" required="required" class="textarea" rows="5" cols="50" wrap="soft"></textarea><br><br>
+          <input type="checkbox" id="checkbox" name="checkbox" checked="checked" required="required"><br>
+          <label class="labelcheckbox">Hiermit erkläre ich mich einverstanden, dass meine in das Kontaktformular eingegebenen Daten elektronisch gespeichert und zum Zweck der Kontaktaufnahme verarbeitet und genutzt werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.</label><br>
+		  <input type="hidden" name="arrival" value="" id="hidden-arrival">
+          <input type="submit" name="submit" value="Senden" class="formbutton" formtarget="_self">
+        </form>
+      </div>
+    </div>
+    <!--<div class="line">
+    </div>
+    <div class="content">
+    </div>-->
+    <div class="contentshare">
+    <div>
+      <a href="https://www.facebook.com/Gasthof-Bergfried-181028415311956/"><i class="fab fa-facebook"  class="share"></i></a>
+      <a href="https://www.google.at/maps/place/Gasthof+Bergfried/@47.556882,13.647025,17z/data=!4m8!3m7!1s0x0:0xe4413e36f1e81b02!5m2!4m1!1i2!8m2!3d47.556673!4d13.646084"><i class="fab fa-google"  class="share"></i></a>
+      <a href="https://www.instagram.com/bergfried_pension/"><i  class="fab fa-instagram"  class="share"></i></a>
+      <a onclick="whatsapp()"><i  class="fab fa-whatsapp"  class="share"></i></a>
+      <a onclick="line()" ><i class='fab fa-line'  class="share"></i></a>
+    </div>
+  </div>
+  <div>
+    <img src="assets/pic/QRW.png" style="width:100%" alt="Whatsapp QR" id="whatsapp">
+    <a href="https://line.me/R/ti/p/@101auaff" id="addme" ><img src="assets/pic/QRL.png" style="width:100%" alt="Line QR" id="line"></a>
+    <div><a id="black" onclick="gone()">Test</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/index.js"></script>
+<script>
+
+function whatsapp() {
+  setTimeout(function() {document.getElementById("whatsapp").style.opacity = "1";}, 300)
+  setTimeout(function() {document.getElementById("black").style.opacity = "0.6";}, 300)
+  document.getElementById("whatsapp").style.display = "block";
+  document.getElementById("black").style.display = "block";
+}
+
+function line() {
+  setTimeout(function() {document.getElementById("line").style.opacity = "1";}, 300)
+  setTimeout(function() {document.getElementById("black").style.opacity = "0.6";}, 300)
+  document.getElementById("line").style.display = "block";
+  document.getElementById("black").style.display = "block";
+}
+
+function gone() {
+  document.getElementById("black").style.opacity = "0";
+  document.getElementById("whatsapp").style.opacity = "0";
+  document.getElementById("line").style.opacity = "0";
+  setTimeout(function() {document.getElementById("whatsapp").style.display = "none";}, 300)
+  setTimeout(function() {document.getElementById("line").style.display = "none";}, 300)
+  setTimeout(function() {document.getElementById("black").style.display = "none";}, 300)
+}
+
+window.onload = start()  
+
+//Nav
+var sidebar = 0
+var navbar = 0
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth;
+    if (prevScrollpos + 0.5 > currentScrollPos) {
+        document.getElementById("connav").style.top = "0px";
+        document.getElementById("ulnav").style.top = "50px";
+
+        prevScrollpos = currentScrollPos;
+  } else if (navbar <= 0 && currentScrollPos > 300) {
+        document.getElementById("connav").style.top = "-210px";
+        document.getElementById("ulnav").style.top = "-210px";
+        prevScrollpos = currentScrollPos;
+    }
+}
+
+
+
+//Navbar Toggler   
+document.getElementById("navbar-toggler").onclick = function() {
+  var win = window,
+  doc = document,
+  docElem = doc.documentElement,
+  body = doc.getElementsByTagName('body')[0],
+  x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+  y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+  console.log(x + ' × ' + y);
+  navbar++
+  sidebar++
+          
+  if (navbar <= 1 && x < 650){
+        document.getElementById("sidebar1").style.display = "block";
+        document.getElementById("sidebar2").style.display = "block";
+        document.getElementById("sidebar3").style.display = "block";
+        document.getElementById("sidebar4").style.display = "block";
+        document.getElementById("sidebar5").style.display = "block";
+        document.getElementById("sidebar6").style.display = "block";
+        document.getElementById("sidebar7").style.display = "block";
+        document.getElementById("sidebar8").style.display = "block";
+        console.log(navbar)
+    } else  if (x < 600) {
+       
+        navbar = 0
+        document.getElementById("sidebar1").style.display = "none";
+        document.getElementById("sidebar2").style.display = "none";
+        document.getElementById("sidebar3").style.display = "none";
+        document.getElementById("sidebar4").style.display = "none";
+        document.getElementById("sidebar5").style.display = "none";
+        document.getElementById("sidebar6").style.display = "none";
+        document.getElementById("sidebar7").style.display = "none";
+        document.getElementById("sidebar8").style.display = "none";
+        console.log("navbar: " + navbar)
+    }
+
+    if (sidebar <= 1 && x > 600){
+        document.getElementById("considebar").style.marginLeft = "calc(100% - 190px)";
+        console.log(sidebar)
+    } else if (x > 600) {
+        sidebar = 0
+        document.getElementById("considebar").style.marginLeft = "100%";
+        console.log("sidebar: " + sidebar)
+    }
+}
+
+function start() {
+  checkCookie()
+  var arrival=getCookie("arrival");
+  var departure=getCookie("departure");
+  var emailHeader = "";
+  if (arrival.length > 1) {
+  	emailHeader = " von " + arrival + " bis " + departure
+	document.getElementById("hidden-arrival").value = emailHeader
+  }
+  var room=getCookie("room");
+  var roomclass=getCookie("roomclass");
+  var adult=getCookie("adult");
+  var kid=getCookie("kid");
+  var notes = document.getElementById("notes");
+  console.log(arrival, departure, room, adult, kid, roomclass);
+  var Erwachsener = "Erwachsene";
+  var Kind = "Kinder";
+  var x = "x "
+    if (room.length <= 0){
+      room = "1"
+    }
+    if (adult.length <= 0){
+      adult = "2"
+    }
+    if (kid.length <= 0){
+      kid = "0"
+    }
+    if (arrival.length <= 0){
+      arrival = "DD.MM.YYYY"
+    }
+    if (departure.length <= 0){
+      departure = "DD.MM.YYYY"
+    }
+	if (roomclass.length <= 0){
+      roomclass = "Zimmer"
+    } else if (roomclass === "Ferienwohnung 1" || roomclass === "Ferienwohnung 2") {
+		x = "die "
+		room = ""
+    }
+
+    if (adult >= 2) {
+      Erwachsener = "Erwachsene";
+      console.log("if")
+        if (kid <= 0) {
+          notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "Ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " + Erwachsener + " reservieren." + "\n\nMit freundlichen Grüßen\nx";
+        } else {
+          if (kid <= 1) {
+            Kind = "Kind";
+            notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " +  Erwachsener + " und " + kid + " " + Kind + " reservieren." + "\n\nMit freundlichen Grüßen\nx";
+          } else {
+            Kind = "Kinder";
+          notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " +  Erwachsener + " und " + kid + " " + Kind + " reservieren." + "\n\nMit freundlichen Grüßen\nx"; 
+          }
+        }
+    } else {
+      Erwachsener = "Erwachsener";
+      if (kid <= 0) {
+        Erwachsener = "Person";
+          notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "Ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " + Erwachsener + " resevieren." + "\n\nMit freundlichen Grüßen\nx";
+        } else {
+          if (kid <= 1) {
+            Kind = "Kind";
+            notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " +  Erwachsener + " und " + kid + " " + Kind + " reservieren." + "\n\nMit freundlichen Grüßen\nx";
+          } else {
+            Kind = "Kinder";
+            notes.value = "Sehr geehrte Frau Wassermeyer,\n\n" + "ich möchte vom "+ arrival + " bis zum " + departure + " " + room + x + roomclass +" für " + adult + " " +  Erwachsener + " und " + kid + " " + Kind + " reservieren." + "\n\nMit freundlichen Grüßen\nx";
+          }
+        }
+    }
+}
+</script>
+</body></html>
+
